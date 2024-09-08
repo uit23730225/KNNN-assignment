@@ -11,6 +11,24 @@ let inputsYVelocity = 0;
 let xVelocity = 0;
 let yVelocity = 0;
 //game loop
+let tileCount = 20;
+let tileSize = canvas.width / tileCount - 2;
+
+let headX = 10;
+let headY = 10;
+let snakeParts = [];
+let tailLength = 2;
+
+let appleX = 5;
+let appleY = 5;
+
+let score = 0;
+class SnakePart {
+  constructor(x, y) {
+      this.x = x;
+      this.y = y;
+  }
+}
 function drawGame() {
     xVelocity = inputsXVelocity;
     yVelocity = inputsYVelocity;
