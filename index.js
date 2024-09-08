@@ -51,6 +51,8 @@ function drawScore() {
 }
 
 function clearScreen() {
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function drawSnake() {
