@@ -81,6 +81,8 @@ function changeSnakePosition() {
 }
 
 function drawApple() {
+  ctx.fillStyle = "red";
+  ctx.fillRect(appleX * tileCount, appleY * tileCount, tileSize, tileSize);
 }
 
 function checkAppleCollision() {
