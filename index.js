@@ -39,6 +39,8 @@ function drawGame() {
     setTimeout(drawGame, 1000 / speed);
   }
 
+  let score = 0;
+
 function isGameOver() {
 }
 
@@ -46,6 +48,8 @@ function drawScore() {
 }
 
 function clearScreen() {
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function drawSnake() {
