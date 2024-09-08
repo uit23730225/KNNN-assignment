@@ -43,9 +43,14 @@ function isGameOver() {
 }
 
 function drawScore() {
+  ctx.fillStyle = "white";
+  ctx.font = "10px Verdana";
+  ctx.fillText("Score " + score, canvas.width - 50, 10);  
 }
 
 function clearScreen() {
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);  
 }
 
 function drawSnake() {
