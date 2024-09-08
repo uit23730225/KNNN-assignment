@@ -1,6 +1,7 @@
 let canvas = document.getElementById("game");
 let ctx = canvas.getContext("2d");  
 // draw on the screen to get the context, ask canvas  to get the 2d context
+
 // speed of the game
 let speed = 7;
 // movement
