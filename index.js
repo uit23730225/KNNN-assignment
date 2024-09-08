@@ -54,6 +54,19 @@ function clearScreen() {
 }
 
 function drawSnake() {
+  ctx.fillStyle = "green";
+  for (let i = 0; i < snakeParts.length; i++) {
+    let part = snakeParts[i];
+    ctx.fillRect(part.x * tileCount, part.y * tileCount, tileSize, tileSize);
+  }
+
+  snakeParts.push(new SnakePart(headX, headY)); //put an item at the end of the list next to the head
+  while (snakeParts.length > tailLength) {
+    snakeParts.shift(); // remove the furthet item from the snake parts if have more than our tail size.
+  }
+
+  ctx.fillStyle = "orange";
+  ctx.fillRect(headX * tileCount, headY * tileCount, tileSize, tileSize);  
 }
 
 function changeSnakePosition() {
