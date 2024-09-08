@@ -45,14 +45,28 @@ function isGameOver() {
 }
 
 function drawScore() {
+  ctx.fillStyle = "white";
+  ctx.font = "10px Verdana";
+  ctx.fillText("Score " + score, canvas.width - 50, 10);  
 }
 
 function clearScreen() {
-  ctx.fillStyle = "black";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function drawSnake() {
+  ctx.fillStyle = "green";
+  for (let i = 0; i < snakeParts.length; i++) {
+    let part = snakeParts[i];
+    ctx.fillRect(part.x * tileCount, part.y * tileCount, tileSize, tileSize);
+  }
+
+  snakeParts.push(new SnakePart(headX, headY)); //put an item at the end of the list next to the head
+  while (snakeParts.length > tailLength) {
+    snakeParts.shift(); // remove the furthet item from the snake parts if have more than our tail size.
+  }
+
+  ctx.fillStyle = "orange";
+  ctx.fillRect(headX * tileCount, headY * tileCount, tileSize, tileSize);  
 }
 
 function changeSnakePosition() {
