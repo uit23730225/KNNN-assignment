@@ -95,6 +95,26 @@ function checkAppleCollision() {
 }
 
 function keyDown(event) {
+  
+  if (event.keyCode == 38 && yVelocity != 1) {
+    inputsYVelocity = -1;
+    inputsXVelocity = 0;
+    }
+
+if (event.keyCode == 40 && yVelocity != -1) {
+    inputsYVelocity = 1;
+    inputsXVelocity = 0;
+    }
+
+if (event.keyCode == 37 && xVelocity != 1) {
+    inputsXVelocity = -1;
+    inputsYVelocity = 0;
+    }
+
+if (event.keyCode == 39 && xVelocity != -1) {
+    inputsXVelocity = 1;
+    inputsYVelocity = 0;
+    }
 }
 
 drawGame()
