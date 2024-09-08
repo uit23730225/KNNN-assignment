@@ -86,6 +86,12 @@ function drawApple() {
 }
 
 function checkAppleCollision() {
+  if (headX === appleX && headY === appleY) {
+    appleX = Math.floor(Math.random() * tileCount);
+    appleY = Math.floor(Math.random() * tileCount);
+    tailLength++;
+    score++;
+    }
 }
 
 function keyDown(event) {
